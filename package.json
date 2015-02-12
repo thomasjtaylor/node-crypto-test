@@ -1,0 +1,30 @@
+{
+  "name": "node-crypto-test",
+  "version": "0.0.1",
+  "description": "Generation and use of PEM certificates for encryption and signing using Node.js crypto and the PEM node module.",
+  "main": "Main.js",
+  "dependencies": {
+    "log4js": "^0.6.22",
+    "pem": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:thomasjtaylor/node-crypto-test.git"
+  },
+  "keywords": [
+    "node",
+    "crypto",
+    "certificates",
+    "encryption"
+  ],
+  "author": "Thomas J. Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomasjtaylor/node-crypto-test/issues"
+  },
+  "homepage": "https://github.com/thomasjtaylor/node-crypto-test"
+}
