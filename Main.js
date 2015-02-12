@@ -202,5 +202,17 @@ getCA(function(ca) {
 	signAndVerify("This is a short message used to test cryptography.", ca.privateKey, ca.certificate);
 	cipherAndDecipher("This is a test message for encipher/decipher using a passphrase.", "This is a passphrase");
 	encryptAndDecrypt("This is a test message for encrypt/decrypt using key pairs.", ca.publicKey, ca.privateKey);
+	
+	// start a HTTPS server using the serverCredentials
+	var https = require('https');
+	https.createServer({
+		key: ca.privateKey,
+		cert: ca.certificate
+	}, function(req,res) {
+		res.writeHead(200);
+		res.end('HTTPS Server Started on http://localhost:8443');
+	}).listen('8443', function() {
+		logger.info('HTTPS Server started on http://localhost:8443; Press Ctrl-C to terminate');
+	});
 });
 
